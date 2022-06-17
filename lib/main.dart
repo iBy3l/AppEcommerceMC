@@ -1,3 +1,4 @@
+import 'package:ecommecer_color/blocs/bloc/cart/cart_bloc.dart';
 import 'package:ecommecer_color/config/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -16,12 +17,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider(
-          create: (_) => WishlistBloc()
-            ..add(
-              StartWishlist(),
-            ),
-        ),
+        BlocProvider(create: (_) => WishlistBloc()..add(StartWishlist())),
+        BlocProvider(create: (_) => CartBloc()..add(CartStarted())),
       ],
       // create: (context) => SubjectBloc(),
       child: MaterialApp(

@@ -1,8 +1,6 @@
 import 'package:ecommecer_color/models/models.dart';
-import 'package:ecommecer_color/models/wishlist_models.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:ecommecer_color/models/product_models.dart';
 
 part 'wishlist_event.dart';
 part 'wishlist_state.dart';
